@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  jupyter-service:
+    build: .
+    volumes:
+      - .:/jupyter
+    ports:
+      - 8888:8888
+    container_name: jupyter-container
+    environment:
+      - JUPYTER_TOKEN=123
